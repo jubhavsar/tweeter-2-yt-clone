@@ -5,7 +5,7 @@ import Sidebar from '../components/Sidebar'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="">
       <Head>
         <title>Tweeter 2.0</title>
        
