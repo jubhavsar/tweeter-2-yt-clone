@@ -1,4 +1,11 @@
 import React from 'react'
+import {
+  CalendarIcon,
+  EmojiHappyIcon,
+  LocationMarkerIcon,
+  PhotographIcon,
+  SearchCircleIcon,
+} from '@heroicons/react/solid';
 
 function TweetBox() {
   return (
@@ -6,9 +13,15 @@ function TweetBox() {
       <img className='object-cover mt-4 rounded-full h-14 w-14' src="https://links.papareact.com/gll" alt="" />
       <div>
         <form>
-          <input type="text" placeholder="What's Happening" />
+          <input type="text" placeholder="What's Happening"/>
           <div>
-            <div>{/* Icons */}</div>
+            <div>
+              <PhotographIcon className='w-5 h-5'/>
+              <SearchCircleIcon className='w-5 h-5'/>
+              <EmojiHappyIcon className='w-5 h-5'/>
+              <CalendarIcon className='w-5 h-5'/>
+              <LocationMarkerIcon className='w-5 h-5'/>
+            </div>
           </div>
           <button>
             Tweet
