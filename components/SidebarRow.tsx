@@ -7,9 +7,9 @@ interface Props {
 
 function SidebarRow({Icon, title}: Props) {
   return (
-    <div>
+    <div className="flex items-center px-3 py-4 space-x-2 transition-all duration-200 rounded-full cursor-pointer group hover:bg-gray-100">
       <Icon className='w-6 h-6'/>
-      <p>{title}</p>
+      <p className="group-hover:text-blue-300 ">{title}</p>
     </div>
   )
 }
