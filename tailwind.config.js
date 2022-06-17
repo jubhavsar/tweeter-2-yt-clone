@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        tweeter: '#00ADED'
+        tweeter: '#00ADED',
       }
     },
   },
