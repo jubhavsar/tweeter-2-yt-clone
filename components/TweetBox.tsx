@@ -15,7 +15,7 @@ function TweetBox() {
         <form>
           <input type="text" placeholder="What's Happening"/>
           <div>
-            <div>
+            <div className='flex space-x-2 text-tweeter'>
               <PhotographIcon className='w-5 h-5'/>
               <SearchCircleIcon className='w-5 h-5'/>
               <EmojiHappyIcon className='w-5 h-5'/>
@@ -23,7 +23,7 @@ function TweetBox() {
               <LocationMarkerIcon className='w-5 h-5'/>
             </div>
           </div>
-          <button>
+          <button className='px-5 py-2 font-bold text-white rounded-full bg-tweeter'>
             Tweet
           </button>
         </form>
