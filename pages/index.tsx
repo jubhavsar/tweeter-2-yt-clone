@@ -10,11 +10,11 @@ const Home: NextPage = () => {
   return (
     <div className="">
       <Head>
-        <title>Tweeter 2.0</title>
+        <title>Twitter 2.0</title>
        
       </Head>
 
-      <main>
+      <main className='grid grid-cols-9'>
         <Sidebar />
       
         <Feed />
