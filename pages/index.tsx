@@ -8,7 +8,7 @@ import Widget from '../components/Widgets'
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <div className="max-h-screen mx-auto overflow-hidden lg:max-w-6xl">
       <Head>
         <title>Twitter 2.0</title>
        
