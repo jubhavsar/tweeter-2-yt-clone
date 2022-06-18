@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   CalendarIcon,
   EmojiHappyIcon,
@@ -8,6 +8,7 @@ import {
 } from '@heroicons/react/solid';
 
 function TweetBox() {
+  const [input, setInput] = useState<string>('');
   return (
     <div className='flex p-5 space-x-2'>
       <img className='object-cover mt-4 rounded-full h-14 w-14' src="https://links.papareact.com/gll" alt="" />
