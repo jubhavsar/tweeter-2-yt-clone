@@ -19,7 +19,7 @@ function TweetBox() {
                  />
           <div className='flex items-center'>
             <div className='flex flex-1 space-x-2 text-tweeter'>
-              <PhotographIcon className='w-5 h-5'/>
+              <PhotographIcon className='w-5 h-5 transition-transform duration-150 ease-out cursor-pointer hover:scale-150'/>
               <SearchCircleIcon className='w-5 h-5'/>
               <EmojiHappyIcon className='w-5 h-5'/>
               <CalendarIcon className='w-5 h-5'/>
