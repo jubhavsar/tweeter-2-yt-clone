@@ -3,7 +3,11 @@ import {
   RefreshIcon
 } from '@heroicons/react/solid'
 import TweetBox from './TweetBox'
+import { Tweet } from '../typings'
 
+interface props {
+  tweets: Tweet[]
+}
 
 function Feed() {
   return (

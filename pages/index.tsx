@@ -4,9 +4,16 @@ import Image from 'next/image'
 import Feed from '../components/Feed'
 import Sidebar from '../components/Sidebar'
 import Widgets from '../components/Widgets'
-import Widget from '../components/Widgets'
+import { Tweet } from '../typings'
+import { fetchTweets } from '../utils/fetchTweets'
 
-const Home: NextPage = () => {
+interface props {
+  tweets: Tweet[]
+}
+
+const Home: NextPage = ({ tweets }: props) => {
+  console.log(tweets);
+  
   return (
     <div className="max-h-screen mx-auto overflow-hidden lg:max-w-6xl">
       <Head>
@@ -17,7 +24,7 @@ const Home: NextPage = () => {
       <main className='grid grid-cols-9'>
         <Sidebar />
       
-        <Feed />
+        <Feed  tweets={tweets}/>
 
         <Widgets />
       </main>
@@ -29,11 +36,11 @@ export default Home
 
 // server side rendering (next.js)
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  // const tweets = await fetchTweets();
+  const tweets = await fetchTweets();
   
   return {
     props: {
-
+      tweets
     }
   }
 }
