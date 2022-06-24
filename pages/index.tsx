@@ -12,7 +12,6 @@ interface props {
 }
 
 const Home: NextPage = ({ tweets }: props) => {
-  console.log(tweets);
   
   return (
     <div className="max-h-screen mx-auto overflow-hidden lg:max-w-6xl">
