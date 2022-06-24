@@ -2,6 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { sanityClient } from '../../sanity'
 import { Tweet } from '../../typings'
+
 type Data = {
   tweets: Tweet[]
 }
