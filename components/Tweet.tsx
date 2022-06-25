@@ -1,8 +1,22 @@
 import React from 'react'
+import { Tweet } from '../typings'
 
-function Tweet() {
+interface props {
+  tweet: Tweet
+}
+
+function Tweet({tweet}: props) {
   return (
-    <div>Tweet</div>
+    <div>
+      <div>
+        <img src={tweet.profileImg} alt="" />
+        <div>
+        <p>{tweet.username}</p>
+        <p>@{tweet.username.replace(/\s+/g,'').toLowerCase()}</p>
+        </div>
+      </div>
+      
+    </div>
   )
 }
 
