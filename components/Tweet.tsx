@@ -16,7 +16,15 @@ interface props {
 function Tweet({tweet}: props) {
   const [comments, setComments] = useState([]);
 
-  
+  const refreshComment = async () => {
+    const comments: Comment[] = await fetchComments(tweet._id)
+    setComments(comments);
+  }
+
+  useEffect( () => {
+    refreshComment()
+  }, [])
+  console.log(comments);
   
   return (
     <div className='flex flex-col p-5 space-x-3 border-gray-100 border-y'>
