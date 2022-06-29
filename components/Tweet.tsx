@@ -14,7 +14,7 @@ interface props {
 }
 
 function Tweet({tweet}: props) {
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState<Comment[]>([])
 
   const refreshComment = async () => {
     const comments: Comment[] = await fetchComments(tweet._id)
@@ -43,7 +43,7 @@ function Tweet({tweet}: props) {
         <div className='flex justify-between m-5'>
           <div className='flex items-center space-x-3 text-gray-400 cursor-pointer'>
             <ChatAlt2Icon className='w-5 h-5'/>
-            <p>5</p>
+            <p>{comments.length}</p>
           </div>
           <div className='flex items-center space-x-3 text-gray-400 cursor-pointer'>
             <SwitchHorizontalIcon className='w-5 h-5'/>
@@ -54,10 +54,20 @@ function Tweet({tweet}: props) {
           <div className='flex items-center space-x-3 text-gray-400 cursor-pointer'>
             <UploadIcon className='w-5 h-5'/>
           </div>
-        
-
       </div>
+      {/* comment box logic */}
+      {comments?.length>0 && (
+        <div>
+          {comments.map((comment) => (
+            <div key={comment.}>
+              <img src={comment.profileImg} alt="" />
+
+            </div>
+          ))}
+        </div>
+      )}
     </div>
+
   )
 }
 
