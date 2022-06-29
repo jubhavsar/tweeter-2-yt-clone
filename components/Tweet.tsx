@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Tweet } from '../typings'
 import TimeAgo from 'react-timeago'
 import {
@@ -7,12 +7,17 @@ import {
   HeartIcon,
   UploadIcon,
 } from '@heroicons/react/solid'
+import { fetchComments } from '../utils/fetchComments'
 
 interface props {
   tweet: Tweet
 }
 
 function Tweet({tweet}: props) {
+  const [comments, setComments] = useState([]);
+
+  
+  
   return (
     <div className='flex flex-col p-5 space-x-3 border-gray-100 border-y'>
       <div className='flex space-x-3'>
